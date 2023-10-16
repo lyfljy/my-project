@@ -1,0 +1,33 @@
+{
+  "extends": "./node_modules/@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "src", 
+    "tests",
+    "env.d.ts", 
+    "src/**/*", 
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "auto-imports.d.ts",
+    "components.d.ts",
+  ],
+  "exclude":[
+    "src/**/__tests__/*",
+    "node_modules", 
+    "**/*.spec.ts"
+  ],
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "target": "esnext",
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client", "@vue/runtime-core"],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
